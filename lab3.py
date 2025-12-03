@@ -7,7 +7,6 @@ def build_graph(V, L):
     for (u, v, c) in L:
         if u == v:
             continue
-        # Dodaj wagę (jeśli wiele krawędzi, sumujemy)
         edges[u][v] = edges[u].get(v, 0) + c
         edges[v][u] = edges[v].get(u, 0) + c
     return edges
