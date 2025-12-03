@@ -125,6 +125,7 @@ root = "./graphs-lab3"
 
 for i in os.listdir(root):
     filename = i
+    print(filename)
 
     V, L = loadWeightedGraph(root + "/" + filename)
     expected = readSolution(root + "/" + filename)
