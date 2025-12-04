@@ -28,7 +28,7 @@ def merge_vertices(edges, x, y):
         del edges[x][y]
     return
 
-def minimum_cut_phase(edges, active):
+def minimum_cut(edges, active):
 
     n = len(edges) - 1
     in_a = [False] * (n + 1)      
@@ -101,7 +101,7 @@ def stoer_wagner(V, L):
 
 
     while sum(1 for i in range(1, V+1) if active[i]) > 1:
-        cut_value, s, t = minimum_cut_phase(edges, active)
+        cut_value, s, t = minimum_cut(edges, active)
         if s is None or t is None:
             if best is None:
                 best = 0
